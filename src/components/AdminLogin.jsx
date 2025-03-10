@@ -11,7 +11,7 @@ const AdminLogin = () => {
     e.preventDefault();
     setError('');
     try {
-      const response = await axios.post('https://faculty-auth-api-1.onrender.com/api/admin/login/', credentials, {
+      const response = await axios.post('https://faculty-auth-api-1.onrender.com/api/admin/login', credentials, {
         headers: {
           'Content-Type': 'application/json',
         },

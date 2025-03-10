@@ -16,7 +16,7 @@ const AddFaculty = () => {
     formData.append('image', facultyData.image);
 
     try {
-      await axios.post('https://faculty-auth-api-1.onrender.com/api/faculty/', formData);
+      await axios.post('https://faculty-auth-api-1.onrender.com/api/faculty', formData);
       alert('Faculty added successfully');
       setFacultyData({ name: '', department: '', image: null });
     } catch (error) {

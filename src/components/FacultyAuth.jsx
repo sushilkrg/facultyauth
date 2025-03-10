@@ -16,7 +16,12 @@ const FacultyAuth = () => {
     try {
       const response = await axios.post(
         "https://faculty-auth-api-1.onrender.com/api/verify-face/",
-        formData
+        formData, {
+        withCredentials: true,
+        headers: {
+          "Content-Type": "multipart/form-data",
+        }
+       }
       );
       setAuthResult(response.data);
     } catch (error) {

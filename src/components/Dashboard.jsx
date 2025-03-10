@@ -10,7 +10,7 @@ const Dashboard = () => {
   useEffect(() => {
     const fetchFaculties = async () => {
       try {
-        const response = await axios.get("https://faculty-auth-api-1.onrender.com/api/faculty/");
+        const response = await axios.get("https://faculty-auth-api-1.onrender.com/api/faculty");
         setFaculties(response.data);
       } catch (error) {
         console.error("Error fetching faculties:", error);
